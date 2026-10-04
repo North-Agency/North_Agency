@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="color-scheme" content="light dark">
 
     <title>NORTH Agency | Vind jouw richting</title>
     <meta name="description" content="NORTH helpt organisaties met communicatie, strategie en creatieve campagnes.">
@@ -15,6 +16,16 @@
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600&display=swap" rel="stylesheet">
 
     <script src="https://kit.fontawesome.com/0000000000.js" crossorigin="anonymous"></script>
+
+    <script>
+    const savedTheme = localStorage.getItem("north-theme");
+
+    if (savedTheme === "dark" || savedTheme === "light") {
+        document.documentElement.setAttribute("data-theme", savedTheme);
+    } else if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+        document.documentElement.setAttribute("data-theme", "dark");
+    }
+</script>
 </head>
 
 <body>
@@ -32,12 +43,28 @@
             <span></span>
         </button>
 
-        <nav class="main-navigation">
-            <a href="index.html" class="active">Home</a>
-            <a href="wie-zijn-we.html">Wie zijn we</a>
-            <a href="team.html">Team</a>
-            <a href="contact.html">Contact</a>
-        </nav>
+        <div class="header-actions">
+
+            <nav class="main-navigation">
+                <a href="index.html">Home</a>
+                <a href="wie-zijn-we.html">Wie zijn we</a>
+                <a href="team.html">Team</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+
+            <button
+                type="button"
+                class="theme-toggle"
+                id="theme-toggle"
+                aria-label="Schakel naar donkere modus"
+                aria-pressed="false"
+                title="Schakel donkere modus in of uit"
+            >
+                <span class="theme-icon theme-icon-sun" aria-hidden="true">☀</span>
+                <span class="theme-icon theme-icon-moon" aria-hidden="true">☾</span>
+            </button>
+
+        </div>
 
     </div>
 </header>
@@ -251,6 +278,42 @@
 <script>
     const menuToggle = document.querySelector(".menu-toggle");
     const navigation = document.querySelector(".main-navigation");
+    const themeToggle = document.querySelector("#theme-toggle");
+    const rootElement = document.documentElement;
+
+    function setTheme(theme) {
+        rootElement.setAttribute("data-theme", theme);
+        localStorage.setItem("north-theme", theme);
+
+        const isDark = theme === "dark";
+
+        themeToggle.setAttribute(
+            "aria-label",
+            isDark
+                ? "Schakel naar lichte modus"
+                : "Schakel naar donkere modus"
+        );
+
+        themeToggle.setAttribute("aria-pressed", isDark ? "true" : "false");
+    }
+
+    const savedTheme = localStorage.getItem("north-theme");
+
+    if (savedTheme === "dark" || savedTheme === "light") {
+        setTheme(savedTheme);
+    } else {
+        const systemUsesDarkMode = window.matchMedia(
+            "(prefers-color-scheme: dark)"
+        ).matches;
+
+        setTheme(systemUsesDarkMode ? "dark" : "light");
+    }
+
+    themeToggle.addEventListener("click", () => {
+        const currentTheme = rootElement.getAttribute("data-theme");
+
+        setTheme(currentTheme === "dark" ? "light" : "dark");
+    });
 
     menuToggle.addEventListener("click", () => {
         navigation.classList.toggle("is-open");

@@ -1092,3 +1092,200 @@ p {
         gap: 5px;
     }
 }
+
+/* =========================================================
+   DARK MODE
+   ========================================================= */
+
+html {
+    color-scheme: light;
+}
+
+/* Navigatie plus dark-modeknop samen uitlijnen */
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+}
+
+/* Knop voor licht/donker thema */
+.theme-toggle {
+    display: grid;
+    width: 42px;
+    height: 42px;
+    place-items: center;
+
+    border: 1px solid var(--border);
+    border-radius: 50%;
+
+    background: transparent;
+    color: var(--blue);
+
+    cursor: pointer;
+    transition:
+        background var(--transition),
+        color var(--transition),
+        border var(--transition),
+        transform var(--transition);
+}
+
+.theme-toggle:hover {
+    border-color: var(--red);
+    background: var(--red);
+    color: var(--white);
+    transform: rotate(12deg);
+}
+
+.theme-icon {
+    grid-area: 1 / 1;
+    font-size: 1.25rem;
+    line-height: 1;
+}
+
+.theme-icon-sun {
+    display: none;
+}
+
+.theme-icon-moon {
+    display: block;
+}
+
+/* Donkere kleuren bij handmatig geselecteerde dark mode */
+html[data-theme="dark"] {
+    color-scheme: dark;
+
+    --blue: #d7efed;
+    --blue-dark: #011918;
+    --red: #f04a50;
+    --red-light: #ff766d;
+
+    --cream: #102927;
+    --cream-dark: #173734;
+    --white: #14302e;
+    --black: #f5f7f6;
+    --grey: #b5c8c6;
+    --border: rgba(215, 239, 237, 0.2);
+}
+
+/* Extra contrast voor de donkerste zones */
+html[data-theme="dark"] .site-header {
+    background: #102927;
+    border-bottom-color: rgba(215, 239, 237, 0.12);
+}
+
+html[data-theme="dark"] .process-section,
+html[data-theme="dark"] .about-preview,
+html[data-theme="dark"] .strategy-section {
+    background: #0d2321;
+}
+
+html[data-theme="dark"] .case-card,
+html[data-theme="dark"] .team-card,
+html[data-theme="dark"] .contact-form-wrapper {
+    background: #173734;
+}
+
+html[data-theme="dark"] .service-card {
+    background: #173734;
+}
+
+html[data-theme="dark"] .service-card:hover {
+    background: #1d4541;
+}
+
+html[data-theme="dark"] .strategy-card {
+    background: #173734;
+}
+
+html[data-theme="dark"] .form-group input,
+html[data-theme="dark"] .form-group select,
+html[data-theme="dark"] .form-group textarea {
+    background: #0d2321;
+    border-color: rgba(215, 239, 237, 0.2);
+    color: #f5f7f6;
+}
+
+html[data-theme="dark"] .form-group input::placeholder,
+html[data-theme="dark"] .form-group textarea::placeholder {
+    color: #9db2af;
+}
+
+/* In dark mode tonen we een zon, want klikken schakelt terug naar licht. */
+html[data-theme="dark"] .theme-icon-moon {
+    display: none;
+}
+
+html[data-theme="dark"] .theme-icon-sun {
+    display: block;
+}
+
+/* Volg de voorkeur van het toestel zolang de bezoeker nog niet manueel koos. */
+@media (prefers-color-scheme: dark) {
+    html:not([data-theme]) {
+        color-scheme: dark;
+
+        --blue: #d7efed;
+        --blue-dark: #011918;
+        --red: #f04a50;
+        --red-light: #ff766d;
+
+        --cream: #102927;
+        --cream-dark: #173734;
+        --white: #14302e;
+        --black: #f5f7f6;
+        --grey: #b5c8c6;
+        --border: rgba(215, 239, 237, 0.2);
+    }
+
+    html:not([data-theme]) .site-header {
+        background: #102927;
+        border-bottom-color: rgba(215, 239, 237, 0.12);
+    }
+
+    html:not([data-theme]) .process-section,
+    html:not([data-theme]) .about-preview,
+    html:not([data-theme]) .strategy-section {
+        background: #0d2321;
+    }
+
+    html:not([data-theme]) .case-card,
+    html:not([data-theme]) .team-card,
+    html:not([data-theme]) .contact-form-wrapper,
+    html:not([data-theme]) .service-card,
+    html:not([data-theme]) .strategy-card {
+        background: #173734;
+    }
+
+    html:not([data-theme]) .form-group input,
+    html:not([data-theme]) .form-group select,
+    html:not([data-theme]) .form-group textarea {
+        background: #0d2321;
+        border-color: rgba(215, 239, 237, 0.2);
+        color: #f5f7f6;
+    }
+
+    html:not([data-theme]) .theme-icon-moon {
+        display: none;
+    }
+
+    html:not([data-theme]) .theme-icon-sun {
+        display: block;
+    }
+}
+
+/* Responsive aanpassingen voor navigatie en knop */
+@media (max-width: 700px) {
+    .header-actions {
+        gap: 14px;
+    }
+
+    .theme-toggle {
+        width: 38px;
+        height: 38px;
+    }
+
+    .main-navigation {
+        right: 16px;
+        left: 16px;
+    }
+}
