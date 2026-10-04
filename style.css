@@ -1193,3 +1193,9 @@ html[data-theme="dark"] .about-hero-content strong {
         width: min(100%, 330px);
     }
 }
+
+/* Logo altijd met normale afbeeldingweergave */
+.logo-link img,
+.about-hero-logo img {
+    mix-blend-mode: normal;
+}
