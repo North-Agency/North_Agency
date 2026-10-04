@@ -145,7 +145,7 @@ h3 {
 }
 
 h1 {
-    font-size: clamp(3.2rem, 7vw, 6.5rem);
+    font-size: clamp(2rem, 4vw, 4rem);
 }
 
 h2 {
@@ -163,7 +163,7 @@ p {
 .eyebrow {
     margin-bottom: 18px;
     color: var(--red);
-    font-size: 2rem;
+    font-size: 3rem;
     font-weight: 700;
     letter-spacing: 0.16em;
     text-transform: uppercase;
