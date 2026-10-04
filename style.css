@@ -688,10 +688,6 @@ p {
     transition: filter var(--transition);
 }
 
-.team-card:hover img {
-    filter: grayscale(0%);
-}
-
 .team-card-content {
     padding: 26px;
 }
