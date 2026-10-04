@@ -1092,3 +1092,104 @@ p {
         gap: 5px;
     }
 }
+
+/* =========================================================
+   WIE ZIJN WE: logo naast de intro
+   ========================================================= */
+
+.page-hero-about {
+    overflow: hidden;
+}
+
+.about-hero-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1.25fr) minmax(280px, 0.75fr);
+    align-items: center;
+    gap: 80px;
+}
+
+.about-hero-content {
+    max-width: 650px;
+}
+
+.about-hero-content h1 {
+    margin-bottom: 28px;
+}
+
+.about-hero-content p:not(.index_p) {
+    max-width: 650px;
+    margin-bottom: 18px;
+    font-size: 1.05rem;
+}
+
+.about-hero-content strong {
+    color: var(--blue);
+}
+
+.about-hero-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    min-height: 320px;
+    padding: 35px;
+
+    border: 1px solid var(--border);
+    background: var(--cream);
+}
+
+.about-hero-logo img {
+    width: min(100%, 430px);
+    height: auto;
+    object-fit: contain;
+    mix-blend-mode: multiply;
+}
+
+/* Dark mode: logo-kader en tekst */
+html[data-theme="dark"] .about-hero-logo {
+    background: #173734;
+}
+
+html[data-theme="dark"] .about-hero-content strong {
+    color: var(--blue);
+}
+
+/* Automatische dark mode volgens toestelinstelling */
+@media (prefers-color-scheme: dark) {
+    html:not([data-theme]) .about-hero-logo {
+        background: #173734;
+    }
+
+    html:not([data-theme]) .about-hero-content strong {
+        color: var(--blue);
+    }
+}
+
+/* Tablet en mobiel */
+@media (max-width: 900px) {
+    .about-hero-grid {
+        grid-template-columns: minmax(0, 1fr) minmax(220px, 0.7fr);
+        gap: 40px;
+    }
+
+    .about-hero-logo {
+        min-height: 250px;
+        padding: 25px;
+    }
+}
+
+@media (max-width: 700px) {
+    .about-hero-grid {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
+    .about-hero-logo {
+        min-height: 210px;
+        padding: 28px;
+    }
+
+    .about-hero-logo img {
+        width: min(100%, 330px);
+    }
+}
