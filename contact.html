@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Contact | NORTH Agency</title>
+    <meta name="description" content="Neem contact op met NORTH Agency.">
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<header class="site-header">
+    <div class="container header-inner">
+
+        <a href="index.html" class="logo-link">
+            <img src="images/logo.jpg" alt="NORTH Agency logo">
+        </a>
+
+        <button class="menu-toggle" aria-label="Menu openen">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <nav class="main-navigation">
+            <a href="index.html">Home</a>
+            <a href="wie-zijn-we.html">Wie zijn we</a>
+            <a href="team.html">Team</a>
+            <a href="contact.html" class="active">Contact</a>
+        </nav>
+
+    </div>
+</header>
+
+<main>
+
+    <section class="page-hero">
+        <div class="container">
+            <p class="eyebrow">Contact</p>
+            <h1>De eerste stap<br><span>begint hier.</span></h1>
+            <p>
+                Heb je een communicatievraagstuk, een idee of gewoon nood aan
+                een frisse blik? Laat van je horen.
+            </p>
+        </div>
+    </section>
+
+    <section class="contact-section">
+        <div class="container contact-grid">
+
+            <div class="contact-details">
+                <p class="eyebrow">Neem contact op</p>
+                <h2>Waar kunnen we<br>je mee helpen?</h2>
+
+                <p>
+                    Vertel ons kort waar je mee bezig bent. We nemen zo snel
+                    mogelijk contact met je op om samen te bekijken welke
+                    richting het beste past.
+                </p>
+
+                <div class="contact-item">
+                    <span>Email</span>
+                    <a href="mailto:hello@north-agency.be">
+                        hello@north-agency.be
+                    </a>
+                </div>
+
+                <div class="contact-item">
+                    <span>Telefoon</span>
+                    <a href="tel:+3212345678">
+                        +32 12 34 56 78
+                    </a>
+                </div>
+
+                <div class="contact-item">
+                    <span>Locatie</span>
+                    <p>
+                        Stationsstraat 10<br>
+                        9100 Sint-Niklaas
+                    </p>
+                </div>
+            </div>
+
+            <div class="contact-form-wrapper">
+
+                <!--
+                Voor een echt werkend formulier op GitHub Pages kun je
+                bijvoorbeeld Formspree gebruiken.
+
+                Vervang action="" door bijvoorbeeld:
+                action="https://formspree.io/f/JOUW_FORM_ID"
+                -->
+
+                <form class="contact-form" action="" method="POST">
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="naam">Naam</label>
+                            <input type="text" id="naam" name="naam" placeholder="Jouw naam" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">E-mailadres</label>
+                            <input type="email" id="email" name="email" placeholder="jouw@email.be" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="bedrijf">Organisatie</label>
+                        <input type="text" id="bedrijf" name="bedrijf" placeholder="Naam van je organisatie">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="onderwerp">Waarover wil je praten?</label>
+                        <select id="onderwerp" name="onderwerp">
+                            <option value="">Maak een keuze</option>
+                            <option value="strategie">Communicatiestrategie</option>
+                            <option value="campagne">Campagne</option>
+                            <option value="content">Content</option>
+                            <option value="merkcommunicatie">Merkcommunicatie</option>
+                            <option value="andere">Andere vraag</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="bericht">Jouw bericht</label>
+                        <textarea id="bericht" name="bericht" rows="6" placeholder="Vertel ons kort waar je hulp bij nodig hebt..." required></textarea>
+                    </div>
+
+                    <button type="submit" class="button">
+                        Verstuur bericht
+                        <span>→</span>
+                    </button>
+
+                </form>
+
+            </div>
+
+        </div>
+    </section>
+
+</main>
+
+<footer class="site-footer">
+    <div class="container footer-grid">
+
+        <div>
+            <h2>Klaar om een richting<br>te kiezen?</h2>
+        </div>
+
+        <div>
+            <p>
+                Heb je een communicatievraagstuk?
+                Laten we samen bekijken waar je naartoe wilt.
+            </p>
+
+            <a href="contact.html" class="button button-light">
+                Neem contact op
+                <span>→</span>
+            </a>
+        </div>
+
+        <div class="social-links">
+            <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">f</a>
+            <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">◎</a>
+            <a href="https://www.tiktok.com/" target="_blank" rel="noopener noreferrer">♪</a>
+            <a href="https://github.com/" target="_blank" rel="noopener noreferrer">◉</a>
+        </div>
+
+    </div>
+
+    <div class="container footer-bottom">
+        <p>© 2026 NORTH Agency. Alle rechten voorbehouden.</p>
+        <p>Communicatie met richting.</p>
+    </div>
+</footer>
+
+<script>
+    const menuToggle = document.querySelector(".menu-toggle");
+    const navigation = document.querySelector(".main-navigation");
+
+    menuToggle.addEventListener("click", () => {
+        navigation.classList.toggle("is-open");
+        menuToggle.classList.toggle("is-open");
+    });
+</script>
+
+</body>
+</html>
