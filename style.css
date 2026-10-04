@@ -84,7 +84,6 @@ textarea {
     width: 100%;
     height: 95px;
     object-fit: contain;
-    mix-blend-mode: multiply;
 }
 
 .main-navigation {
@@ -1142,7 +1141,6 @@ p {
     width: min(100%, 430px);
     height: auto;
     object-fit: contain;
-    mix-blend-mode: multiply;
 }
 
 /* Dark mode: logo-kader en tekst */
