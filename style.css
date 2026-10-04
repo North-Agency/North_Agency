@@ -160,6 +160,15 @@ p {
     color: var(--grey);
 }
 
+.index_p {
+    margin-bottom: 18px;
+    color: var(--red);
+    font-size: 1.25rem;
+    font-weight: 700;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+}
+
 .eyebrow {
     margin-bottom: 18px;
     color: var(--red);
