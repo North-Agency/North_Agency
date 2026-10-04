@@ -432,10 +432,25 @@ p {
 }
 
 .service-icon {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+    width: 58px;
+    height: 58px;
     margin-bottom: 24px;
-    color: var(--red);
-    font-size: 2.8rem;
-    line-height: 1;
+
+    color: #D41920;
+}
+
+.service-icon svg {
+    width: 100%;
+    height: 100%;
+
+    stroke: currentColor;
+    stroke-width: 2.2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
 }
 
 .service-card h3 {
