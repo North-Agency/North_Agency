@@ -1143,25 +1143,12 @@ p {
     object-fit: contain;
 }
 
-/* Dark mode: logo-kader en tekst */
-html[data-theme="dark"] .about-hero-logo {
-    background: #173734;
-}
+
 
 html[data-theme="dark"] .about-hero-content strong {
     color: var(--blue);
 }
 
-/* Automatische dark mode volgens toestelinstelling */
-@media (prefers-color-scheme: dark) {
-    html:not([data-theme]) .about-hero-logo {
-        background: #173734;
-    }
-
-    html:not([data-theme]) .about-hero-content strong {
-        color: var(--blue);
-    }
-}
 
 /* Tablet en mobiel */
 @media (max-width: 900px) {
