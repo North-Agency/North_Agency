@@ -913,11 +913,15 @@ p {
     }
 
     .logo-link {
-        width: 200px;
+        display: inline-block;
+        width: 220px;
     }
 
     .logo-link img {
-        height: 100px;
+        width: 100%;
+        height: 95px;
+        object-fit: contain;
+        mix-blend-mode: multiply;
     }
 
     .menu-toggle {
