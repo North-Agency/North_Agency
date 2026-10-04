@@ -688,7 +688,7 @@ p {
 }
 
 .team-card:hover img {
-    filter: grayscale(10%);
+    filter: grayscale(35%);
 }
 
 .team-card-content {
