@@ -163,7 +163,7 @@ p {
 .eyebrow {
     margin-bottom: 18px;
     color: var(--red);
-    font-size: 0.75rem;
+    font-size: 1rem;
     font-weight: 700;
     letter-spacing: 0.16em;
     text-transform: uppercase;
