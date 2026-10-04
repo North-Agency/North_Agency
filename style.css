@@ -16,7 +16,9 @@
     --transition: 0.25s ease;
 }
 
-/* Basis */
+/* =========================================================
+   BASIS
+   ========================================================= */
 
 * {
     margin: 0;
@@ -57,13 +59,15 @@ textarea {
     margin: 0 auto;
 }
 
-/* Header */
+/* =========================================================
+   HEADER
+   ========================================================= */
 
 .site-header {
     position: relative;
     z-index: 10;
-    background: var(--cream);
     border-bottom: 1px solid rgba(4, 52, 51, 0.08);
+    background: var(--cream);
 }
 
 .header-inner {
@@ -84,6 +88,11 @@ textarea {
     width: 100%;
     height: 95px;
     object-fit: contain;
+
+    background: transparent;
+    filter: none;
+    opacity: 1;
+    mix-blend-mode: normal;
 }
 
 .main-navigation {
@@ -138,7 +147,9 @@ textarea {
     transition: var(--transition);
 }
 
-/* Typografie */
+/* =========================================================
+   TYPOGRAFIE
+   ========================================================= */
 
 h1,
 h2,
@@ -186,7 +197,9 @@ p {
     background: var(--cream-dark);
 }
 
-/* Knoppen */
+/* =========================================================
+   KNOPPEN
+   ========================================================= */
 
 .button {
     display: inline-flex;
@@ -238,7 +251,9 @@ p {
     color: var(--red);
 }
 
-/* Hero */
+/* =========================================================
+   HOMEPAGE HERO
+   ========================================================= */
 
 .hero {
     position: relative;
@@ -250,6 +265,7 @@ p {
 .hero-image {
     position: absolute;
     inset: 0 0 0 42%;
+
     background:
         linear-gradient(
             90deg,
@@ -286,7 +302,9 @@ p {
     font-size: 1.05rem;
 }
 
-/* Intro / kompas */
+/* =========================================================
+   INTRO / KOMPAS
+   ========================================================= */
 
 .intro-section {
     padding: 125px 0;
@@ -352,10 +370,11 @@ p {
     z-index: 1;
     color: var(--red);
     font-size: 5rem;
-    transform: rotate(0deg);
 }
 
-/* Proces */
+/* =========================================================
+   PROCES
+   ========================================================= */
 
 .process-section {
     padding: 125px 0;
@@ -408,7 +427,10 @@ p {
     font-size: 2rem;
 }
 
-/* Diensten: desktop = 3 x 2 */
+/* =========================================================
+   DIENSTEN
+   Desktop: 3 kolommen × 2 rijen
+   ========================================================= */
 
 .services-section {
     padding: 125px 0;
@@ -427,7 +449,6 @@ p {
 .service-card {
     min-height: 270px;
     padding: 34px 30px;
-
     border: 0;
     background: var(--cream-dark);
 
@@ -449,14 +470,12 @@ p {
     width: 58px;
     height: 58px;
     margin-bottom: 24px;
-
     color: var(--red);
 }
 
 .service-icon svg {
     width: 100%;
     height: 100%;
-
     stroke: currentColor;
     stroke-width: 2.2;
     stroke-linecap: round;
@@ -475,7 +494,9 @@ p {
     font-size: 0.88rem;
 }
 
-/* Over ons preview */
+/* =========================================================
+   OVER ONS PREVIEW
+   ========================================================= */
 
 .about-preview {
     padding: 125px 0;
@@ -534,7 +555,9 @@ p {
     background: var(--red);
 }
 
-/* Cases */
+/* =========================================================
+   CASES
+   ========================================================= */
 
 .cases-section {
     padding: 125px 0;
@@ -581,7 +604,9 @@ p {
     font-size: 1rem;
 }
 
-/* Algemene pagina-header */
+/* =========================================================
+   ALGEMENE PAGINA-HEADER
+   ========================================================= */
 
 .page-hero {
     padding: 120px 0 100px;
@@ -598,7 +623,9 @@ p {
     font-size: 1.1rem;
 }
 
-/* Wie zijn we */
+/* =========================================================
+   WIE ZIJN WE
+   ========================================================= */
 
 .content-section {
     padding: 120px 0;
@@ -659,7 +686,64 @@ p {
     margin-bottom: 18px;
 }
 
-/* Team */
+/* Logo naast intro op “Wie zijn we?” */
+
+.page-hero-about {
+    overflow: hidden;
+}
+
+.about-hero-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1.25fr) minmax(280px, 0.75fr);
+    align-items: center;
+    gap: 80px;
+}
+
+.about-hero-content {
+    max-width: 650px;
+}
+
+.about-hero-content h1 {
+    margin-bottom: 28px;
+}
+
+.about-hero-content p:not(.index_p) {
+    max-width: 650px;
+    margin-bottom: 18px;
+    font-size: 1.05rem;
+}
+
+.about-hero-content strong {
+    color: var(--blue);
+}
+
+.about-hero-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    min-height: 320px;
+    padding: 35px;
+
+    border: 1px solid var(--border);
+    background: var(--cream);
+}
+
+.about-hero-logo img {
+    display: block;
+    width: min(100%, 430px);
+    height: auto;
+
+    object-fit: contain;
+    background: transparent;
+    filter: none;
+    opacity: 1;
+    mix-blend-mode: normal;
+}
+
+/* =========================================================
+   TEAM
+   ========================================================= */
 
 .team-section {
     padding: 120px 0;
@@ -711,7 +795,9 @@ p {
     font-size: 0.92rem;
 }
 
-/* Contact */
+/* =========================================================
+   CONTACT
+   ========================================================= */
 
 .contact-section {
     padding: 120px 0;
@@ -807,7 +893,9 @@ p {
     resize: vertical;
 }
 
-/* Footer */
+/* =========================================================
+   FOOTER
+   ========================================================= */
 
 .site-footer {
     padding: 75px 0 25px;
@@ -873,7 +961,9 @@ p {
     font-size: 0.75rem;
 }
 
-/* Tablet */
+/* =========================================================
+   TABLET
+   ========================================================= */
 
 @media (max-width: 900px) {
     .header-inner {
@@ -902,7 +992,6 @@ p {
         gap: 50px;
     }
 
-    /* Diensten: 2 kolommen op tablet */
     .services-grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
     }
@@ -915,6 +1004,16 @@ p {
         grid-column: 1 / -1;
     }
 
+    .about-hero-grid {
+        grid-template-columns: minmax(0, 1fr) minmax(220px, 0.7fr);
+        gap: 40px;
+    }
+
+    .about-hero-logo {
+        min-height: 250px;
+        padding: 25px;
+    }
+
     .footer-grid {
         grid-template-columns: 1fr 1fr;
     }
@@ -924,7 +1023,9 @@ p {
     }
 }
 
-/* Mobiel */
+/* =========================================================
+   MOBIEL
+   ========================================================= */
 
 @media (max-width: 700px) {
     .container {
@@ -1017,7 +1118,8 @@ p {
     .two-column-content,
     .contact-grid,
     .about-preview-grid,
-    .footer-grid {
+    .footer-grid,
+    .about-hero-grid {
         grid-template-columns: 1fr;
     }
 
@@ -1040,7 +1142,6 @@ p {
         border-bottom: 1px solid var(--border);
     }
 
-    /* Diensten: één kaart per rij op mobiel */
     .services-grid,
     .cases-grid,
     .strategy-grid,
@@ -1063,6 +1164,20 @@ p {
 
     .page-hero h1 {
         font-size: clamp(2.8rem, 14vw, 4.7rem);
+    }
+
+    .about-hero-grid {
+        gap: 35px;
+    }
+
+    .about-hero-logo {
+        min-height: 210px;
+        padding: 28px;
+        background: var(--cream);
+    }
+
+    .about-hero-logo img {
+        width: min(100%, 330px);
     }
 
     .team-card img {
@@ -1090,97 +1205,4 @@ p {
         flex-direction: column;
         gap: 5px;
     }
-}
-
-/* =========================================================
-   WIE ZIJN WE: logo naast de intro
-   ========================================================= */
-
-.page-hero-about {
-    overflow: hidden;
-}
-
-.about-hero-grid {
-    display: grid;
-    grid-template-columns: minmax(0, 1.25fr) minmax(280px, 0.75fr);
-    align-items: center;
-    gap: 80px;
-}
-
-.about-hero-content {
-    max-width: 650px;
-}
-
-.about-hero-content h1 {
-    margin-bottom: 28px;
-}
-
-.about-hero-content p:not(.index_p) {
-    max-width: 650px;
-    margin-bottom: 18px;
-    font-size: 1.05rem;
-}
-
-.about-hero-content strong {
-    color: var(--blue);
-}
-
-.about-hero-logo {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    min-height: 320px;
-    padding: 35px;
-
-    border: 1px solid var(--border);
-    background: var(--cream);
-}
-
-.about-hero-logo img {
-    width: min(100%, 430px);
-    height: auto;
-    object-fit: contain;
-}
-
-
-
-html[data-theme="dark"] .about-hero-content strong {
-    color: var(--blue);
-}
-
-
-/* Tablet en mobiel */
-@media (max-width: 900px) {
-    .about-hero-grid {
-        grid-template-columns: minmax(0, 1fr) minmax(220px, 0.7fr);
-        gap: 40px;
-    }
-
-    .about-hero-logo {
-        min-height: 250px;
-        padding: 25px;
-    }
-}
-
-@media (max-width: 700px) {
-    .about-hero-grid {
-        grid-template-columns: 1fr;
-        gap: 35px;
-    }
-
-    .about-hero-logo {
-        min-height: 210px;
-        padding: 28px;
-    }
-
-    .about-hero-logo img {
-        width: min(100%, 330px);
-    }
-}
-
-/* Logo altijd met normale afbeeldingweergave */
-.logo-link img,
-.about-hero-logo img {
-    mix-blend-mode: normal;
 }
